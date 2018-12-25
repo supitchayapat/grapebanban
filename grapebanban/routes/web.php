@@ -11,7 +11,6 @@
 |
 */
 Route::get('/', 'ProductController@index');
-<<<<<<< HEAD
 
 
 Route::get('/registerz', function (){
@@ -31,8 +30,10 @@ Route::get('/logingz', 'RegisterLoginController@index');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-=======
 Route::get('/ตะกร้าสินค้า', function(){
     return view('cart.cart');
 });
->>>>>>> 28342b4ef271d7912afc3127963c7cf63f6983a0
+
+Route::get('/สั่งซื้อสินค้า', function(){
+    return view('cart.postmail');
+});
