@@ -20,7 +20,7 @@
             <a class="p-2 text-dark" href="#">ติดต่อเรา</a>
             <a class="p-2 text-dark" href="#">ตะกร้าสินค้า</a>
         </nav>
-        <a class="btn btn-outline-primary" href="#">เข้าสู่ระบบ</a>
+        <a class="btn btn-outline-warning" href="#">เข้าสู่ระบบ</a>
         </div>
 
         <div class="container">
