@@ -19,11 +19,12 @@ Route::get('/registerz', function (){
 });
 Route::post('/registerz','RegisterLoginController@registerc');
 
-Route::get('/logingz', 'RegisterLoginController@index');
+Route::get('/logingz', 'RegisterLoginController@logingz');
 
 
 // Route::post('/login', 'RegisterLoginController@login');
 
+Route::get('/logout', 'RegisterLoginController@getSignOut');
 
 
 
@@ -33,7 +34,10 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/ตะกร้าสินค้า', function(){
     return view('cart.cart');
 });
+<<<<<<< HEAD
 
 Route::get('/สั่งซื้อสินค้า', function(){
     return view('cart.postmail');
 });
+=======
+>>>>>>> master

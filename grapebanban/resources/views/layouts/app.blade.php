@@ -17,14 +17,36 @@
         <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
         <h5 class="my-0 mr-md-auto font-weight-normal">องุ่นบ้านบ้าน.ไทย</h5>
         <nav class="my-2 my-md-0 mr-md-3">
-            <a class="p-2 text-dark" href="#">หน้าหลักร้านค้า</a>
+            <a class="p-2 text-dark" href="/">หน้าหลักร้านค้า</a>
             <a class="p-2 text-dark" href="#">วิธีการสั่งซื้อสินค้า</a>
             <a class="p-2 text-dark" href="#">วิธีชำระเงิน</a>
             <a class="p-2 text-dark" href="#">เกี่ยวกับเรา</a>
             <a class="p-2 text-dark" href="#">ติดต่อเรา</a>
+            @auth
             <a class="p-2 text-dark" href="/ตะกร้าสินค้า">ตะกร้าสินค้า</a>
+            <a class="p-2 text-dark" href="/ติดตามสถานะสินค้า">ติดตามสถานะสินค้า</a>
+
+        @endauth
         </nav>
-        <a class="btn btn-outline-warning" href="#">เข้าสู่ระบบ</a>
+        @auth
+
+      
+     
+      <a href="logout">
+					ออกจากระบบ
+					</a>
+
+                      
+                             
+
+        @endauth
+
+
+        @guest
+
+        <a class="btn btn-outline-warning" href="login">เข้าสู่ระบบ</a>
+        @endguest
+
         </div>
 
         @yield('content')
