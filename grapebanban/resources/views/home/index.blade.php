@@ -32,7 +32,7 @@
     @foreach ($products as $product)
         <div class="card-deck">
             <div class="card text-center">
-                <img class="card-img-top" src=".../100px180/?text=Image cap" alt="Card image cap">
+            <img class="card-img-top" src="{{ $product['imagePath'] }}" alt="{{ $product['name'] }}">
                 <div class="card-body">
                     <h5 class="card-title">{{ $product['name'] }}</h5>
                     <p class="card-text">ราคา {{ $product['cost'] }} บาท/{{ $product['unit'] }}</p>

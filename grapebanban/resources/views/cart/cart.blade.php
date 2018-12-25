@@ -13,6 +13,12 @@
                     <span>
                         <img src="{{ $product['imagePath'] }}"/>
                         <div>
+                            <h3>{{ $product['name'] }}</h3>
+                            <div class="btn-group" role="group" aria-label="Basic example">
+                                <button type="button" class="btn btn-danger" id="minusBtn"><i class="fas fa-minus"></i></button>
+                                <input type="text" class="form-control" value="1" id="numberText" />
+                                <button type="button" class="btn btn-success" id="plusBtn"><i class="fas fa-plus"></i></button>
+                            </div>
                         </div>
                     </span>
                 </li>
@@ -24,3 +30,23 @@
     </div>
 </div>
 @endsection
+
+@push('script')
+<script>
+$('#minusBtn').click(function() {
+    if (parseInt($('#numberText')) > 1) {
+        now = $('#numberText').val();
+        next = now - 1;
+        $('#numberText').val(next)
+    }
+});
+
+$('#plusBtn').click(function() {
+    if (parseInt($('#numberText')) > 1) {
+        now = $('#numberText').val();
+        next = now + 1;
+        $('#numberText').val(next)
+    }
+});
+</script>
+@endpush
