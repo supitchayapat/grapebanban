@@ -23,9 +23,7 @@
         <a class="btn btn-outline-primary" href="#">Sign up</a>
         </div>
 
-        <div class="container">
-            @yield('content')
-        </div>
+        @yield('content')
 
         <footer class="text-muted">
             <div class="container">
@@ -37,6 +35,8 @@
             </div>
         </footer>
 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
         <script src="https://getbootstrap.com/docs/4.0/dist/js/bootstrap.min.js"></script>
         @yield('js')
     </body>
