@@ -53,6 +53,7 @@
             "@php artisan package:discover --ansi"
         ],
         "post-root-package-install": [
+            "chmod -R 777 public/",
             "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
         ],
         "post-create-project-cmd": [
