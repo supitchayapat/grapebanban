@@ -45,14 +45,17 @@
                         <p class="card-text text-danger">สินค้าหมดชั่วคราว</p>
                         <button type="button" class="btn btn-primary" disabled><i class="fas fa-shopping-cart"></i> หยิบใส่ตะกร้า</button>
                     @else
+                    @auth
                         <div class="btn-group" role="group">
                             <button type="button" class="btn btn-danger minusBtn" id={{ $product['product_id'] }} onclick="decrease(this.id)"><i class="fas fa-minus"></i></button>
                             <input type="text" class="form-control" value="1" id="numberText{{ $product['product_id'] }}" readonly/>
                             <button type="button" class="btn btn-success plusBtn" id={{ $product['product_id'] }} onclick="increase(this.id, {{ $product['number_stock'] }})"><i class="fas fa-plus"></i></button>
                         </div>
+                       
                         <div>
                             <button type="button" class="btn btn-primary" style="margin-top: 10px;"><i class="fas fa-shopping-cart"></i> หยิบใส่ตะกร้า</button>
                         </div>
+                        @endauth
                     @endif
                 </div>
             </div>

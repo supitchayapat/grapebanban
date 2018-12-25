@@ -13,10 +13,7 @@ class ProductController extends Controller
     {
 
     $Product = Product::select('*')->distinct()->get();
-<<<<<<< HEAD
-=======
 
->>>>>>> 28342b4ef271d7912afc3127963c7cf63f6983a0
 
         // return View::make('/')->with(compact('Product'));
 

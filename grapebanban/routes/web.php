@@ -11,7 +11,6 @@
 |
 */
 Route::get('/', 'ProductController@index');
-<<<<<<< HEAD
 
 
 Route::get('/registerz', function (){
@@ -20,19 +19,18 @@ Route::get('/registerz', function (){
 });
 Route::post('/registerz','RegisterLoginController@registerc');
 
-Route::get('/logingz', 'RegisterLoginController@index');
+Route::get('/logingz', 'RegisterLoginController@logingz');
 
 
 // Route::post('/login', 'RegisterLoginController@login');
 
+Route::get('/logout', 'RegisterLoginController@getSignOut');
 
 
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-=======
 Route::get('/ตะกร้าสินค้า', function(){
     return view('cart.cart');
 });
->>>>>>> 28342b4ef271d7912afc3127963c7cf63f6983a0

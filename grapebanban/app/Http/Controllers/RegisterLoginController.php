@@ -7,9 +7,10 @@ use App\User;
 use Illuminate\Support\Facades\Input;
 use Validator;
 use Response;
+use Redirect;
 
-
-
+use Hash;
+use Auth;
 
 class RegisterLoginController extends Controller
 {
@@ -19,7 +20,7 @@ class RegisterLoginController extends Controller
 
     public function registerc(Request $req)
     {
-
+        
             $email =  $req->email;
          
           $ad =   explode('@',$email);
@@ -31,10 +32,10 @@ class RegisterLoginController extends Controller
 
         $User = new User();
         $User->email = $req->email;
-        $User->password = bcrypt($req->password);
+        $User->password = Hash::make($req->firstname);
         $User->firstname = $req->firstname ;
         $User->surname = $req->surname ;
-        $User->discount_privilage = $email; 
+        // $User->discount_privilage = $email; 
         $User->save();
 
         
@@ -42,9 +43,14 @@ class RegisterLoginController extends Controller
         
     }
 
-
+    
   
 
-
+    public function getSignOut() {
+		
+        Auth::logout();
+        return redirect('/home');
+        
+    }
 
 }
