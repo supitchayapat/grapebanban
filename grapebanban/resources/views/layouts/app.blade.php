@@ -22,14 +22,12 @@
             <a class="p-2 text-dark" href="#">วิธีชำระเงิน</a>
             <a class="p-2 text-dark" href="#">เกี่ยวกับเรา</a>
             <a class="p-2 text-dark" href="#">ติดต่อเรา</a>
-            <a class="p-2 text-dark" href="#">ตะกร้าสินค้า</a>
+            <a class="p-2 text-dark" href="/ตะกร้าสินค้า">ตะกร้าสินค้า</a>
         </nav>
-        <a class="btn btn-outline-primary" href="#">เข้าสู่ระบบ</a>
+        <a class="btn btn-outline-warning" href="#">เข้าสู่ระบบ</a>
         </div>
 
-        <div class="container">
-            @yield('content')
-        </div>
+        @yield('content')
 
         <footer style="background-color:white" class="pt-4 my-md-5 pt-md-5 border-top">
         	<div class="row">
@@ -46,6 +44,7 @@
 		</footer>
         <script	>
 
+<<<<<<< HEAD
 $.ajaxSetup({
     headers: {
         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
@@ -54,6 +53,10 @@ $.ajaxSetup({
 
 
 </script>
+=======
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+>>>>>>> 28342b4ef271d7912afc3127963c7cf63f6983a0
         <script src="https://getbootstrap.com/docs/4.0/dist/js/bootstrap.min.js"></script>
         @yield('js')
     </body>
