@@ -11,6 +11,22 @@
 |
 */
 Route::get('/', 'ProductController@index');
-// Route::get('/', function () {
-//     return view('home/index');
-// });
+
+
+Route::get('/registerz', function (){
+
+    return view('home/register');
+});
+Route::post('/registerz','RegisterLoginController@registerc');
+
+Route::get('/logingz', 'RegisterLoginController@index');
+
+
+// Route::post('/login', 'RegisterLoginController@login');
+
+
+
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

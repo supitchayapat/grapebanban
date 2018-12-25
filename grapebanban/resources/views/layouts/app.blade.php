@@ -6,10 +6,14 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
         <link href="https://getbootstrap.com/docs/4.0/dist/css/bootstrap.min.css" rel="stylesheet">
         <link href="https://getbootstrap.com/docs/4.0/examples/pricing/pricing.css" rel="stylesheet">
+         
+        {{ csrf_field() }}   
         @yield('css')
+     
 
     </head>
     <body style="background-color:#CC9933">
+      <meta name="csrf-token" content="{{ csrf_token() }}">
         <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
         <h5 class="my-0 mr-md-auto font-weight-normal">องุ่นบ้านบ้าน.ไทย</h5>
         <nav class="my-2 my-md-0 mr-md-3">
@@ -40,7 +44,16 @@
 			</div>
 			</div>
 		</footer>
+        <script	>
 
+$.ajaxSetup({
+    headers: {
+        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    }
+});
+
+
+</script>
         <script src="https://getbootstrap.com/docs/4.0/dist/js/bootstrap.min.js"></script>
         @yield('js')
     </body>

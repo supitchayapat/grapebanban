@@ -28,7 +28,7 @@ class ProfileController extends Controller
     public function edituser(Request $req)
     {
 
-        
+       
         $User = new User;
        
 

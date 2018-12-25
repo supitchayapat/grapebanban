@@ -12,10 +12,7 @@ class ProductController extends Controller
     public function index()
     {
 
-    $Product = Product::select('product_name')->distinct()->get();
-
-      
-        // return View::make('/')->with(compact('Product'));
+    $Product = Product::select('*')->distinct()->get();
 
 
 
