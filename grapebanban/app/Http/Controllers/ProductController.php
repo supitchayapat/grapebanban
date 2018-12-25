@@ -12,8 +12,8 @@ class ProductController extends Controller
     public function index()
     {
 
-        $Product = Product::select('product_name')->distinct()->get();
-
+    $Product = Product::select('product_name')->distinct()->get();
+dd($Product);
         return view('home/index',$Product);
     }
 
