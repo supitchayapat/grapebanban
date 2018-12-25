@@ -30,7 +30,7 @@
 <div class="container">
     <div class="row">
     @foreach ($products as $product)
-        <div class="col col-md-4 col-sm-12 col-12">
+        <div class="card-deck">
             <div class="card text-center">
                 <img class="card-img-top" src=".../100px180/?text=Image cap" alt="Card image cap">
                 <div class="card-body">
@@ -41,9 +41,9 @@
                         <button type="button" class="btn btn-primary" disabled><i class="fas fa-shopping-cart"></i> หยิบใส่ตะกร้า</button>
                     @else
                         <div class="btn-group" role="group" aria-label="Basic example">
-                            <button type="button" class="btn btn-danger"><i class="fas fa-minus"></i></button>
-                            <input type="text" class="form-control" value="1" />
-                            <button type="button" class="btn btn-success"><i class="fas fa-plus"></i></button>
+                            <button type="button" class="btn btn-danger" id="minusBtn"><i class="fas fa-minus"></i></button>
+                            <input type="text" class="form-control" value="1" id="numberText" />
+                            <button type="button" class="btn btn-success" id="plusBtn"><i class="fas fa-plus"></i></button>
                         </div>
                         <button type="button" class="btn btn-primary"><i class="fas fa-shopping-cart"></i> หยิบใส่ตะกร้า</button>
                     @endif
@@ -86,3 +86,23 @@
     </div>
 </div>
 @endsection
+
+@push('script')
+<script>
+$('#minusBtn').click(function() {
+    if (parseInt($('#numberText')) > 1) {
+        now = $('#numberText').val();
+        next = now - 1;
+        $('#numberText').val(next)
+    }
+});
+
+$('#plusBtn').click(function() {
+    if (parseInt($('#numberText')) > 1) {
+        now = $('#numberText').val();
+        next = now + 1;
+        $('#numberText').val(next)
+    }
+});
+</script>
+@endpush
