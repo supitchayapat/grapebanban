@@ -11,7 +11,7 @@
                 @foreach ($products as $product)
                 <li class="list-group-item d-flex justify-content-between align-items-center">
                     <span>
-                        <img src="{{ $product['imagePath'] }}"/>
+                        <img src={{ $product['imagePath'] }}/>
                         <div>
                             <h3>{{ $product['name'] }}</h3>
                             <div class="btn-group" role="group" aria-label="Basic example">
@@ -22,6 +22,7 @@
                         </div>
                     </span>
                 </li>
+                @endforeach
             </ul>
         </div>
         <div class="card-footer">
@@ -31,22 +32,22 @@
 </div>
 @endsection
 
-@push('script')
+@section('js')
 <script>
-$('#minusBtn').click(function() {
-    if (parseInt($('#numberText')) > 1) {
-        now = $('#numberText').val();
-        next = now - 1;
-        $('#numberText').val(next)
+    function increase(id, bound) {
+        now = parseInt($('#numberText' + id).val());
+        if (now < parseInt(bound)) {
+            next = now + 1;
+            $('#numberText' + id).val(next)
+        }
     }
-});
 
-$('#plusBtn').click(function() {
-    if (parseInt($('#numberText')) > 1) {
-        now = $('#numberText').val();
-        next = now + 1;
-        $('#numberText').val(next)
+    function decrease(id) {
+        if (parseInt($('#numberText' + id).val()) > 1) {
+            now = parseInt($('#numberText' + id).val());
+            next = now - 1;
+            $('#numberText' + id).val(next)
+        }
     }
-});
 </script>
-@endpush
+@endsection

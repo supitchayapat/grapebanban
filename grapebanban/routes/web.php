@@ -11,6 +11,6 @@
 |
 */
 Route::get('/', 'ProductController@index');
-// Route::get('/', function () {
-//     return view('home/index');
-// });
+Route::get('/ตะกร้าสินค้า', function(){
+    return view('cart.cart');
+});

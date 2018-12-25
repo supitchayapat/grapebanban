@@ -18,7 +18,7 @@
             <a class="p-2 text-dark" href="#">วิธีชำระเงิน</a>
             <a class="p-2 text-dark" href="#">เกี่ยวกับเรา</a>
             <a class="p-2 text-dark" href="#">ติดต่อเรา</a>
-            <a class="p-2 text-dark" href="#">ตะกร้าสินค้า</a>
+            <a class="p-2 text-dark" href="/ตะกร้าสินค้า">ตะกร้าสินค้า</a>
         </nav>
         <a class="btn btn-outline-warning" href="#">เข้าสู่ระบบ</a>
         </div>
