@@ -11,7 +11,7 @@ class Shoppingcart extends Model
 
     protected $primaryKey = 'shopping_id';
 
-    protected $table = 'shoppingcart';
+    protected $table = 'shopping_cart';
 
 
  
