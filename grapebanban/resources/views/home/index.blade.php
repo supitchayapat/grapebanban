@@ -29,7 +29,7 @@
 </div>
 <div class="container">
     <div class="row">
-    @foreach ($products as $product)
+    @foreach ($Product as $product)
         <div class="card-deck">
             <div class="card text-center">
                 <img class="card-img-top" src=".../100px180/?text=Image cap" alt="Card image cap">
@@ -54,35 +54,9 @@
     </div>
     <div class="container">
         <!--check feedback -->
-        @if (count($feedbacks) === 0)
-            ยังไม่มีความคิดเห็น
-        @else
-            @foreach ($feedbacks as $feedback)
-                <div class="row">
-                    <div class="col-md-6 offset-md-3">
-                        <div class="row">
-                            {{ $feedback['orderNumber'] }}
-                        </div>
-                        <div class="row">
-                            {{ $feedback['userName'] }}
-                        </div>
-                        <div class="row">
-                            {{ $feedback['reviews'] }}
-                        </div>
-                        <div class="row">
-                            <span>
-                                @for ($i = 0; $i < count($feedback['stars']); $i++)
-                                    <i class="fas fa-star" style="color: yellow;"></i>
-                                @endfor
-                                @for ($i = 0; $i < 5 - count($feedback['stars']); $i++)
-                                    <i class="fas fa-star"></i>
-                                @endfor
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            @endforeach
-        @endif
+      
+
+      
     </div>
 </div>
 @endsection

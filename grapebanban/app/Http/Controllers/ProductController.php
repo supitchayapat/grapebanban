@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Product;
-
+use View;
 
 class ProductController extends Controller
 {
@@ -13,8 +13,17 @@ class ProductController extends Controller
     {
 
     $Product = Product::select('product_name')->distinct()->get();
-dd($Product);
-        return view('home/index',$Product);
+
+      
+        // return View::make('/')->with(compact('Product'));
+
+
+
+        $dataall = array(
+            'Product' =>   $Product,
+    
+        );
+    return view('home.index',$dataall);
     }
 
     // public function Shopping_item()
